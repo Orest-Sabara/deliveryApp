@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delivery app</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css?family=Maitree:300,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script crossorigin src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script crossorigin src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js"></script>
+</head>
+<body>
+
+
+<div class="page">
+
+<!--  ---Header---  -->
+        <div class="svg-container">
+            <svg viewbox="0 0 800 400" class="svg">
+                <path id="curve" fill="#075672" d="M 800 300 Q 400 350 0 300 L 0 0 L 800 0 L 800 300 Z">
+                </path>
+            </svg>
+        </div>
+
+        <header>
+            <h1>This is a Delivery app</h1>
+            <h4>	&#169; Orest Sabara</h4>
+            <br>
+            <br>
+            <div>
+                <h2>
+                    <span class="borderAwesome"><a href="#sh"><i class="fa-solid fa-shop"></i></i> Магазин</a></span>
+                    <span class="borderAwesome"><a href="about.html"><i class="fa-solid fa-percent"></i> Акції</a></span>
+                    <span class="basket-item">  </span>
+                </h2>
+            </div>
+        </header>
+
+<!--  main  -->
+
+        <main>
+            <a href="" name="sh"></a>
+            <ul class="tabs-block">
+                <div class="label"></div>
+                <li class="active" data-menu="1">McDonald`s</li>
+                <li data-menu="2">KFC</li>
+                <li data-menu="3">Burger King</li>
+                <li data-menu="4">Taco Bell</li>
+            </ul>
+            <div class="article-block">
+                <div class="article num_1 show">
+                    <div class="basket-products">
+                        <div class="item_box">
+                            <img src="assets/images/McD/BigMac.jfif" alt="BigMac" width="300" height="200">
+                            <h3 class="item_title">БІГ МАК</h3>
+
+                            <div class="product__price"><span class="product__price-number">90</span> грн</div>
+
+                            <div class="product__size" style="display: flex">
+                                <div style="margin-left: 74px" class="product__size-element fl-c radio_button product__size-element_active" data-sb-curent-price="90" data-sb-curent-size="L" data-sb-curent-id-or-vendor-code="90">L</div>
+                                <div class="product__size-element fl-c radio_button product__size-element_active" data-sb-curent-price="120" data-sb-curent-size=" XL" data-sb-curent-id-or-vendor-code="120">XL</div>
+                            </div>
+
+                            <div class="product__quantity"></div>
+
+                            <button class="add_item"
+                                    data-sb-product-name="БІГ МАК"
+                                    data-sb-product-price="90"
+                                    data-sb-product-quantity="1"
+                                    data-sb-product-img="assets/images/McD/BigMac.jfif" alt="BigMac" width="300" height="200"
+                                    data-id="1">Добавити в корзину
+                            </button>
+
+                        </div>
+                        <div class="item_box">
+                            <img src="assets/images/McD/CheeseBurger.jfif" alt="CheeseBurger" width="300" height="200">
+                            <h3 class="item_title">ЧІЗБУРГЕР</h3>
+                            <div class="product__price"><span class="product__price-number">45</span> грн</div>
+                            <div class="product__size" style="display: flex">
+                                <div style="margin-left: 74px" class="product__size-element fl-c radio_button product__size-element_active" data-sb-curent-price="45" data-sb-curent-size=" L" data-sb-curent-id-or-vendor-code="45">L</div>
+                                <div class="product__size-element fl-c radio_button product__size-element_active" data-sb-curent-price="65" data-sb-curent-size=" XL" data-sb-curent-id-or-vendor-code="65">XL</div>
+                            </div>
+                            <div class="product__quantity"></div>
+                            <button class="add_item"
+                                    data-sb-product-name="ЧІЗБУРГЕР"
+                                    data-sb-product-price="45"
+                                    data-sb-product-quantity="1"
+                                    data-sb-product-img="assets/images/McD/CheeseBurger.jfif" alt="BigMac" width="300" height="200"
+                                    data-id="2">Добавити в корзину</button>
+                        </div>
+                        <div class="item_box">
+                            <img src="assets/images/McD/McChicken.jfif" alt="McChicken" width="300" height="200">
+                            <h3 class="item_title">МАК ЧІКЕН</h3>
+                            <div class="product__price"><span class="product__price-number">88</span> грн</div>
+                            <div class="product__size" style="display: flex">
+                                <div style="margin-left: 74px" class="product__size-element fl-c radio_button product__size-element_active" data-sb-curent-price="88" data-sb-curent-size=" L" data-sb-curent-id-or-vendor-code="88">L</div>
+                                <div class="product__size-element fl-c radio_button product__size-element_active" data-sb-curent-price="102" data-sb-curent-size=" XL" data-sb-curent-id-or-vendor-code="102">XL</div>
+                            </div>
+                            <div class="product__quantity"></div>
+                            <button class="add_item"
+                                    data-sb-product-name="МАК ЧІКЕН"
+                                    data-sb-product-price="88"
+                                    data-sb-product-quantity="1"
+                                    data-sb-product-img="assets/images/McD/McChicken.jfif" alt="McChicken" width="300" height="200"
+                                    data-id="2">Добавити в корзину</button>
+                        </div>
+                        <div class="item_box">
+                            <img src="assets/images/McD/McFlurry.jfif" alt="McFlurry" width="300" height="200">
+                            <h3 class="item_title">МАК ФЛУРІ</h3>
+                            <div class="product__price"><span class="product__price-number">43</span> грн</div>
+                            <div class="product__size" style="display: flex">
+                                <div style="margin-left: 74px" class="product__size-element fl-c radio_button product__size-element_active" data-sb-curent-price="43" data-sb-curent-size=" L" data-sb-curent-id-or-vendor-code="43">L</div>
+                                <div class="product__size-element fl-c radio_button product__size-element_active" data-sb-curent-price="54" data-sb-curent-size=" XL" data-sb-curent-id-or-vendor-code="54">XL</div>
+                            </div>
+                            <div class="product__quantity"></div>
+                            <button class="add_item"
+                                    data-sb-product-name="МАК ЧІКЕН"
+                                    data-sb-product-price="43"
+                                    data-sb-product-quantity="1"
+                                    data-sb-product-img="assets/images/McD/McFlurry.jfif" alt="McFlurry" width="300" height="200"
+                                    data-id="2">Добавити в корзину</button>
+                        </div>
+                        <div class="item_box">
+                            <img src="assets/images/McD/Nuggets.jfif" alt="Nuggets" width="300" height="200">
+                            <h3 class="item_title">НАГЕТСИ</h3>
+                            <div class="product__price"><span class="product__price-number">66</span> грн</div>
+                            <div class="product__size" style="display: flex">
+                                <div style="margin-left: 74px" class="product__size-element fl-c radio_button product__size-element_active" data-sb-curent-price="66" data-sb-curent-size=" L" data-sb-curent-id-or-vendor-code="66">L</div>
+                                <div class="product__size-element fl-c radio_button product__size-element_active" data-sb-curent-price="77" data-sb-curent-size=" XL" data-sb-curent-id-or-vendor-code="77">XL</div>
+                            </div>
+                            <div class="product__quantity"></div>
+                            <button class="add_item"
+                                    data-sb-product-name="НАГЕТСИ"
+                                    data-sb-product-price="66"
+                                    data-sb-product-quantity="1"
+                                    data-sb-product-img="assets/images/McD/Nuggets.jfif" alt="Nuggets" width="300" height="200"
+                                    data-id="2">Добавити в корзину</button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="article num_2">
+                    <div class="basket-products">
+                        <div class="item_box">
+                            <img src="assets/images/KFC/ChBurg.jpg" alt="burger" width="300" height="300">
+                            <h3 class="item_title">ЧІЗБУРГЕР</h3>
+                            <div class="product__price"><span class="product__price-number">51</span> грн</div>
+                            <div class="product__size" style="display: flex">
+                                <div style="margin-left: 74px" class="product__size-element fl-c radio_button product__size-element_active" data-sb-curent-price="51" data-sb-curent-size=" L" data-sb-curent-id-or-vendor-code="51">L</div>
+                                <div class="product__size-element fl-c radio_button product__size-element_active" data-sb-curent-price="67" data-sb-curent-size=" XL" data-sb-curent-id-or-vendor-code="67">XL</div>
+                            </div>
+                            <div class="product__quantity"></div>
+                            <button class="add_item"
+                                    data-sb-product-name="ЧІЗБУРГЕР"
+                                    data-sb-product-price="51"
+                                    data-sb-product-quantity="1"
+                                    data-sb-product-img="assets/images/KFC/ChBurg.jpg" alt="ChBurg" width="300" height="200"
+                                    data-id="2">Добавити в корзину</button>
+                        </div>
+                        <div class="item_box">
+                            <img src="assets/images/KFC/Long.jpg" alt="longer" width="300" height="300">
+                            <h3 class="item_title">ЛОНГЕР</h3>
+                            <div class="product__price"><span class="product__price-number">83</span> грн</div>
+                            <div class="product__size" style="display: flex">
+                                <div style="margin-left: 74px" class="product__size-element fl-c radio_button product__size-element_active" data-sb-curent-price="83" data-sb-curent-size=" L" data-sb-curent-id-or-vendor-code="83">L</div>
+                                <div class="product__size-element fl-c radio_button product__size-element_active" data-sb-curent-price="93" data-sb-curent-size=" XL" data-sb-curent-id-or-vendor-code="93">XL</div>
+                            </div>
+                            <div class="product__quantity"></div>
+                            <button class="add_item"
+                                    data-sb-product-name="ЛОНГЕР"
+                                    data-sb-product-price="83"
+                                    data-sb-product-quantity="1"
+                                    data-sb-product-img="assets/images/KFC/Long.jpg" alt="Long" width="300" height="200"
+                                    data-id="2">Добавити в корзину</button>
+                        </div>
+                        <div class="item_box">
+                            <img src="assets/images/KFC/2Ch.jpg" alt="double chicken" width="300" height="300">
+                            <h3 class="item_title">ДАБЛ ЧІКЕН</h3>
+                            <div class="product__price"><span class="product__price-number">104</span> грн</div>
+                            <div class="product__size" style="display: flex">
+                                <div style="margin-left: 74px" class="product__size-element fl-c radio_button product__size-element_active" data-sb-curent-price="104" data-sb-curent-size=" L" data-sb-curent-id-or-vendor-code="104">L</div>
+                                <div class="product__size-element fl-c radio_button product__size-element_active" data-sb-curent-price="124" data-sb-curent-size=" XL" data-sb-curent-id-or-vendor-code="124">XL</div>
+                            </div>
+                            <div class="product__quantity"></div>
+                            <button class="add_item"
+                                    data-sb-product-name="ДАБЛ ЧІКЕН"
+                                    data-sb-product-price="104"
+                                    data-sb-product-quantity="1"
+                                    data-sb-product-img="assets/images/KFC/2Ch.jpg" alt="2Ch" width="300" height="200"
+                                    data-id="2">Добавити в корзину</button>
+                        </div>
+                        <div class="item_box">
+                            <img src="assets/images/KFC/roll.jpg" alt="roll" width="300" height="300">
+                            <h3 class="item_title">ШЕФ РОЛ</h3>
+                            <div class="product__price"><span class="product__price-number">37</span> грн</div>
+                            <div class="product__size" style="display: flex">
+                                <div style="margin-left: 74px" class="product__size-element fl-c radio_button product__size-element_active" data-sb-curent-price="37" data-sb-curent-size=" L" data-sb-curent-id-or-vendor-code="37">L</div>
+                                <div class="product__size-element fl-c radio_button product__size-element_active" data-sb-curent-price="54" data-sb-curent-size=" XL" data-sb-curent-id-or-vendor-code="54">XL</div>
+                            </div>
+                            <div class="product__quantity"></div>
+                            <button class="add_item"
+                                    data-sb-product-name="ШЕФ РОЛ"
+                                    data-sb-product-price="37"
+                                    data-sb-product-quantity="1"
+                                    data-sb-product-img="assets/images/KFC/roll.jpg" alt="roll" width="300" height="200"
+                                    data-id="2">Добавити в корзину</button>
+                        </div>
+                        <div class="item_box">
+                            <img src="assets/images/KFC/basket-s.png" alt="basket-s" width="300" height="300">
+                            <h3 class="item_title">БАКЕТ</h3>
+                            <div class="product__price"><span class="product__price-number">37</span> грн</div>
+                            <div class="product__size" style="display: flex">
+                                <div style="margin-left: 74px" class="product__size-element fl-c radio_button product__size-element_active" data-sb-curent-price="146" data-sb-curent-size=" L" data-sb-curent-id-or-vendor-code="146">L</div>
+                                <div class="product__size-element fl-c radio_button product__size-element_active" data-sb-curent-price="174" data-sb-curent-size=" XL" data-sb-curent-id-or-vendor-code="174">XL</div>
+                            </div>
+                            <div class="product__quantity"></div>
+                            <button class="add_item"
+                                    data-sb-product-name="БАКЕТ"
+                                    data-sb-product-price="146"
+                                    data-sb-product-quantity="1"
+                                    data-sb-product-img="assets/images/KFC/basket-s.jpg" alt="basket" width="300" height="200"
+                                    data-id="2">Добавити в корзину</button>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="article num_3">
+                    <div class="basket-products">
+                        <div class="item_box">
+                            <img src="assets/images/BK/big-king.webp" alt="big king" width="300" height="200">
+                            <h3 class="item_title">БІГ КІНГ</h3>
+                            <div class="product__price"><span class="product__price-number">96</span> грн</div>
+                            <div class="product__size" style="display: flex">
+                                <div style="margin-left: 74px" class="product__size-element fl-c radio_button product__size-element_active" data-sb-curent-price="96" data-sb-curent-size=" L" data-sb-curent-id-or-vendor-code="96">L</div>
+                                <div class="product__size-element fl-c radio_button product__size-element_active" data-sb-curent-price="123" data-sb-curent-size=" XL" data-sb-curent-id-or-vendor-code="123">XL</div>
+                            </div>
+                            <div class="product__quantity"></div>
+                            <button class="add_item"
+                                    data-sb-product-name="БІГ КІНГ"
+                                    data-sb-product-price="96"
+                                    data-sb-product-quantity="1"
+                                    data-sb-product-img="assets/images/BK/big-king.webp" alt="big-king" width="300" height="200"
+                                    data-id="2">Добавити в корзину</button>
+                        </div>
+                        <div class="item_box">
+                            <img src="assets/images/BK/chBurg.webp" alt="cheese burger" width="300" height="200">
+                            <h3 class="item_title">ЧІЗБУРГЕР</h3>
+                            <div class="product__price"><span class="product__price-number">36</span> грн</div>
+                            <div class="product__size" style="display: flex">
+                                <div style="margin-left: 74px" class="product__size-element fl-c radio_button product__size-element_active" data-sb-curent-price="36" data-sb-curent-size=" L" data-sb-curent-id-or-vendor-code="136">L</div>
+                                <div class="product__size-element fl-c radio_button product__size-element_active" data-sb-curent-price="48" data-sb-curent-size=" XL" data-sb-curent-id-or-vendor-code="48">XL</div>
+                            </div>
+                            <div class="product__quantity"></div>
+                            <button class="add_item"
+                                    data-sb-product-name="ЧІЗБУРГЕР"
+                                    data-sb-product-price="36"
+                                    data-sb-product-quantity="1"
+                                    data-sb-product-img="assets/images/BK/chBurg.webp" alt="chBurg" width="300" height="200"
+                                    data-id="2">Добавити в корзину</button>
+                        </div>
+                        <div class="item_box">
+                            <img src="assets/images/BK/whopper.webp" alt="whopper" width="300" height="200">
+                            <h3 class="item_title">ВОППЕР</h3>
+                            <div class="product__price"><span class="product__price-number">51</span> грн</div>
+                            <div class="product__size" style="display: flex">
+                                <div style="margin-left: 74px" class="product__size-element fl-c radio_button product__size-element_active" data-sb-curent-price="51" data-sb-curent-size=" L" data-sb-curent-id-or-vendor-code="151">L</div>
+                                <div class="product__size-element fl-c radio_button product__size-element_active" data-sb-curent-price="67" data-sb-curent-size=" XL" data-sb-curent-id-or-vendor-code="167">XL</div>
+                            </div>
+                            <div class="product__quantity"></div>
+                            <button class="add_item"
+                                    data-sb-product-name="ВОППЕР"
+                                    data-sb-product-price="51"
+                                    data-sb-product-quantity="1"
+                                    data-sb-product-img="assets/images/BK/whopper.webp" alt="whopper" width="300" height="200"
+                                    data-id="2">Добавити в корзину</button>
+                        </div>
+                        <div class="item_box">
+                            <img src="assets/images/KFC/ChBurg.jpg" alt="burger" width="300" height="300">
+                            <h3 class="item_title">ЧІЗБУРГЕР</h3>
+                            <div class="product__price"><span class="product__price-number">51</span> грн</div>
+                            <div class="product__size" style="display: flex">
+                                <div style="margin-left: 74px" class="product__size-element fl-c radio_button product__size-element_active" data-sb-curent-price="51" data-sb-curent-size=" L" data-sb-curent-id-or-vendor-code="51">L</div>
+                                <div class="product__size-element fl-c radio_button product__size-element_active" data-sb-curent-price="67" data-sb-curent-size=" XL" data-sb-curent-id-or-vendor-code="67">XL</div>
+                            </div>
+                            <div class="product__quantity"></div>
+                            <button class="add_item"
+                                    data-sb-product-name="ЧІЗБУРГЕР"
+                                    data-sb-product-price="51"
+                                    data-sb-product-quantity="1"
+                                    data-sb-product-img="assets/images/KFC/ChBurg.jpg" alt="ChBurg" width="300" height="200"
+                                    data-id="2">Добавити в корзину</button>
+                        </div>
+                        <div class="item_box">
+                            <img src="assets/images/McD/Nuggets.jfif" alt="Nuggets" width="300" height="200">
+                            <h3 class="item_title">НАГЕТСИ</h3>
+                            <div class="product__price"><span class="product__price-number">69</span> грн</div>
+                            <div class="product__size" style="display: flex">
+                                <div style="margin-left: 74px" class="product__size-element fl-c radio_button product__size-element_active" data-sb-curent-price="69" data-sb-curent-size=" L" data-sb-curent-id-or-vendor-code="69">L</div>
+                                <div class="product__size-element fl-c radio_button product__size-element_active" data-sb-curent-price="79" data-sb-curent-size=" XL" data-sb-curent-id-or-vendor-code="79">XL</div>
+                            </div>
+                            <div class="product__quantity"></div>
+                            <button class="add_item"
+                                    data-sb-product-name="НАГЕТСИ"
+                                    data-sb-product-price="69"
+                                    data-sb-product-quantity="1"
+                                    data-sb-product-img="assets/images/McD/Nuggets.jfif" alt="Nuggets" width="300" height="200"
+                                    data-id="2">Добавити в корзину</button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="article num_4">
+                    <div class="basket-products">
+                        <div class="item_box">
+                            <img src="assets/images/McD/BigMac.jfif" alt="BigMac" width="300" height="200">
+                            <h3 class="item_title">TACOS</h3>
+
+                            <div class="product__price"><span class="product__price-number">90</span> грн</div>
+
+                            <div class="product__size" style="display: flex">
+                                <div style="margin-left: 74px" class="product__size-element fl-c radio_button product__size-element_active" data-sb-curent-price="90" data-sb-curent-size="L" data-sb-curent-id-or-vendor-code="90">L</div>
+                                <div class="product__size-element fl-c radio_button product__size-element_active" data-sb-curent-price="120" data-sb-curent-size=" XL" data-sb-curent-id-or-vendor-code="120">XL</div>
+                            </div>
+
+                            <div class="product__quantity"></div>
+
+                            <button class="add_item"
+                                    data-sb-product-name="TACOS"
+                                    data-sb-product-price="90"
+                                    data-sb-product-quantity="1"
+                                    data-sb-product-img="assets/images/McD/BigMac.jfif" alt="BigMac" width="300" height="200"
+                                    data-id="1">Добавити в корзину
+                            </button>
+
+                        </div>
+                        <div class="item_box">
+                            <img src="assets/images/McD/CheeseBurger.jfif" alt="CheeseBurger" width="300" height="200">
+                            <h3 class="item_title">BURRITOS</h3>
+                            <div class="product__price"><span class="product__price-number">45</span> грн</div>
+                            <div class="product__size" style="display: flex">
+                                <div style="margin-left: 74px" class="product__size-element fl-c radio_button product__size-element_active" data-sb-curent-price="45" data-sb-curent-size=" L" data-sb-curent-id-or-vendor-code="405">L</div>
+                                <div class="product__size-element fl-c radio_button product__size-element_active" data-sb-curent-price="65" data-sb-curent-size=" XL" data-sb-curent-id-or-vendor-code="605">XL</div>
+                            </div>
+                            <div class="product__quantity"></div>
+                            <button class="add_item"
+                                    data-sb-product-name="BURRITOS"
+                                    data-sb-product-price="45"
+                                    data-sb-product-quantity="1"
+                                    data-sb-product-img="assets/images/McD/CheeseBurger.jfif" alt="BigMac" width="300" height="200"
+                                    data-id="2">Добавити в корзину</button>
+                        </div>
+                        <div class="item_box">
+                            <img src="assets/images/McD/McChicken.jfif" alt="McChicken" width="300" height="200">
+                            <h3 class="item_title">CHIKEN QUESADILLA</h3>
+                            <div class="product__price"><span class="product__price-number">88</span> грн</div>
+                            <div class="product__size" style="display: flex">
+                                <div style="margin-left: 74px" class="product__size-element fl-c radio_button product__size-element_active" data-sb-curent-price="88" data-sb-curent-size=" L" data-sb-curent-id-or-vendor-code="808">L</div>
+                                <div class="product__size-element fl-c radio_button product__size-element_active" data-sb-curent-price="102" data-sb-curent-size=" XL" data-sb-curent-id-or-vendor-code="1002">XL</div>
+                            </div>
+                            <div class="product__quantity"></div>
+                            <button class="add_item"
+                                    data-sb-product-name="CHIKEN QUESADILLA"
+                                    data-sb-product-price="88"
+                                    data-sb-product-quantity="1"
+                                    data-sb-product-img="assets/images/McD/McChicken.jfif" alt="McChicken" width="300" height="200"
+                                    data-id="2">Добавити в корзину</button>
+                        </div>
+                        <div class="item_box">
+                            <img src="assets/images/McD/McFlurry.jfif" alt="McFlurry" width="300" height="200">
+                            <h3 class="item_title">CINNABON</h3>
+                            <div class="product__price"><span class="product__price-number">43</span> грн</div>
+                            <div class="product__size" style="display: flex">
+                                <div style="margin-left: 74px" class="product__size-element fl-c radio_button product__size-element_active" data-sb-curent-price="43" data-sb-curent-size=" L" data-sb-curent-id-or-vendor-code="403">L</div>
+                                <div class="product__size-element fl-c radio_button product__size-element_active" data-sb-curent-price="54" data-sb-curent-size=" XL" data-sb-curent-id-or-vendor-code="504">XL</div>
+                            </div>
+                            <div class="product__quantity"></div>
+                            <button class="add_item"
+                                    data-sb-product-name="CINNABON"
+                                    data-sb-product-price="43"
+                                    data-sb-product-quantity="1"
+                                    data-sb-product-img="assets/images/McD/McFlurry.jfif" alt="McFlurry" width="300" height="200"
+                                    data-id="2">Добавити в корзину</button>
+                        </div>
+                        <div class="item_box">
+                            <img src="assets/images/McD/Nuggets.jfif" alt="Nuggets" width="300" height="200">
+                            <h3 class="item_title">FRIES SUPREME</h3>
+                            <div class="product__price"><span class="product__price-number">66</span> грн</div>
+                            <div class="product__size" style="display: flex">
+                                <div style="margin-left: 74px" class="product__size-element fl-c radio_button product__size-element_active" data-sb-curent-price="66" data-sb-curent-size=" L" data-sb-curent-id-or-vendor-code="606">L</div>
+                                <div class="product__size-element fl-c radio_button product__size-element_active" data-sb-curent-price="77" data-sb-curent-size=" XL" data-sb-curent-id-or-vendor-code="707">XL</div>
+                            </div>
+                            <div class="product__quantity"></div>
+                            <button class="add_item"
+                                    data-sb-product-name="FRIES SUPREME"
+                                    data-sb-product-price="66"
+                                    data-sb-product-quantity="1"
+                                    data-sb-product-img="assets/images/McD/Nuggets.jfif" alt="Nuggets" width="300" height="200"
+                                    data-id="2">Добавити в корзину</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </main>
+
+<!--  Footer  -->
+        <footer>
+            <div class="div-footer">
+                <ul>
+                    <li><a href="https://twitter.com/?lang=uk">Twitter</a></li>
+                    <li><a href="https://www.facebook.com/profile.php?id=100006334003652">Facebook</a></li>
+                    <li><a href="https://mail.google.com">Email</a></li>
+                    <li><a href="https://www.instagram.com/">Instagram</a></li>
+                    <li><a href="https://github.com/Orest-Sabara">Github</a></li>
+                    <li>
+                        <p>👋</p>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+
+    </div>
+
+<!-- script -->
+<script src="assets/js/script.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+<link rel="stylesheet" href="smartbasket/css/smartbasket.min.css">
+
+<div class="smart-basket__wrapper"></div>
+
+<script src="./smartbasket/js/smartbasket.min.js"></script>
+
+<script>
+    $(function () {
+        $('.smart-basket__wrapper').smbasket({
+            productElement: 'item_box',
+            buttonAddToBasket: 'add_item',
+            productPrice: 'product__price-number',
+            productSize: 'product__size-element',
+
+            productQuantityWrapper: 'product__quantity',
+            smartBasketMinArea: 'basket-item',
+            countryCode: '+380',
+            smartBasketCurrency: ' грн',
+            smartBasketMinIconPath: './smartbasket/img/shopping-basket-wight.svg',
+
+            agreement: {
+                isRequired: true,
+                isChecked: true,
+                isLink: 'https://artstranger.ru/privacy.html',
+            },
+            nameIsRequired: false,
+        });
+    });
+</script>
+
+</body>
+</html>
